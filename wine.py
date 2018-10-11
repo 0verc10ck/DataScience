@@ -19,15 +19,15 @@ print(result.var(axis= 0))
 print("\n\n")
 
 #원형차트 (white vs. red)
-result.plot.pie(y='WineType')
-plt.show()
+result['WineType'].value_counts().plot.pie(autopct='%.1f')
+#plt.show()
 
 print('히스토그램')
 result['alcohol'].plot.hist()
 plt.show()
 
 print('상자 그림')
-result['fixed acidity'].plot.box()
+result['pH'].plot.box(by ='class')
 plt.show()
 
 print('바이올림 플롯') #(전체 속성 또는 속성 자유 선택, 단 white vs. red 확률밀도함수 구분하여 출력)
