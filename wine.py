@@ -20,7 +20,7 @@ print("\n\n")
 
 #원형차트 (white vs. red)
 result['WineType'].value_counts().plot.pie(autopct='%.1f')
-#plt.show()
+plt.show()
 
 print('히스토그램')
 result['alcohol'].plot.hist()
